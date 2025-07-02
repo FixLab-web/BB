@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Universo de Breaking Bad</title>
+    <style>
+        body {
+            background-image: url('img/fondo2.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: verdana;
+
+        }
+
+        .header {
+            background: linear-gradient(90deg, #0f3d0f, #1a5e1a);
+            color: #eaffd0;
+            text-align: center;
+            text-shadow: 2px 2px 4px #000000;
+            padding: 20px;
+            margin: 30px 60px;
+            border-radius: 12px;
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 0 10px #1a8c32, 0 0 20px #000;
+            transition: all 0.4s ease-in-out;
+            border: 2px solid #1a8c32;
+            text-transform: uppercase;
+        }
+
+        .header:hover {
+            background: linear-gradient(90deg, #3a6e3a, #0f3d0f);
+            color: #ffffff;
+            text-shadow: 0 0 10px #00ff99;
+            box-shadow: 0 0 30px #00ff99;
+            transform: scale(1.05);
+        }
+
+
+        .tarjetas-contenedor {
+            display: flex;
+            height: 100%;
+            flex-wrap: wrap;
+            padding: 40px;
+            gap: 40px;
+            justify-content: center;
+            background: linear-gradient(to right, rgba(0, 20, 0, 0.8), rgba(0, 0, 0, 0.6));
+            border-radius: 20px;
+            margin: 0px 100px;
+            box-sizing: border-box;
+            box-shadow: 0 0 25px #1a8c32;
+            border: 3px solid #1a8c32;
+        }
+
+        .tarjetas-contenedor>div {
+            width: 270px;
+            height: 400px;
+            perspective: 1200px;
+        }
+
+        .tarjeta {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 1.2s ease-in-out;
+            transform-style: preserve-3d;
+            box-shadow: 0 0 15px #00ff99;
+            border-radius: 15px;
+            cursor: pointer;
+            border: 3px solid #00ff99;
+            background-color: #101f10;
+        }
+
+        .tarjetas-contenedor>div:hover .tarjeta {
+            transform: rotateY(180deg);
+            box-shadow: 0 0 30px #00ff99, 0 0 60px #1affaa;
+        }
+
+        .frente,
+        .atras {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 15px;
+            border: 3px solid #00ffcc;
+        }
+
+        .frente {
+            background: linear-gradient(to bottom, #1a5e1a, #0f3d0f);
+        }
+
+        .frente h3 {
+            margin: 15px 0 10px 0;
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            padding: 5px 0;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            text-align: center;
+            font-size: 22px;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        .frente img {
+            max-width: 65%;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            box-shadow: 0 0 10px #00ffcc;
+        }
+
+        .frente p {
+            color: #eaffd0;
+            text-align: center;
+            flex-grow: 1;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        .atras {
+            overflow: auto;
+            background-color: rgba(20, 60, 20, 0.95);
+            color: #eaffd0;
+            transform: rotateY(180deg);
+            justify-content: center;
+            font-weight: bold;
+            font-size: 17px;
+            text-align: center;
+            border: 2px solid #00ff99;
+            box-shadow: inset 0 0 15px #00cc66;
+            padding: 20px;
+            line-height: 1.5;
+            border-radius: 15px;
+            font-family: 'Courier New', monospace;
+        }
+
+
+        .autor {
+            text-align: right;
+            margin: 20px 50px;
+            color: #fff;
+            font-style: italic;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="header">Universo de Breaking Bad</h1>
+    <section class="tarjetas-contenedor">
+        <div>
+            <div class="tarjeta">
+                <div class="frente">
+                    <h3>Breaking bad Temporada 1</h3>
+                    <img src="img/temp1.jpg" alt="Temporada 1" />
+                    <p>"Tú conoces el negocio, y yo la química"</p>
+                </div>
+                <div class="atras">
+                    <p> Walter White, un profesor de química con cáncer terminal, decide fabricar metanfetamina con la
+                        ayuda de su exalumno Jesse Pinkman para asegurar el futuro económico de su familia. Comienzan en
+                        un mundo peligroso que desconocen.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="tarjeta">
+                <div class="frente">
+                    <h3>Breaking bad Temporada 2</h3>
+                    <img src="img/temp2.jpg" alt="Temporada 2" />
+                    <p>"Better Call Saul"</p>
+                </div>
+                <div class="atras">
+                    <p> Walter y Jesse enfrentan las consecuencias de sus acciones: problemas con la ley, conflictos con
+                        otros narcotraficantes y tensiones personales. Saul Goodman, un abogado poco convencional,
+                        aparece para ayudarlos.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="tarjeta">
+                <div class="frente">
+                    <h3>Breaking bad Temporada 3</h3>
+                    <img src="img/temp3.jpg" alt="Temporada 3" />
+                    <p>"Mosca"</p>
+                </div>
+                <div class="atras">
+                    <p>Gus Fring, un poderoso narcotraficante, ofrece a Walter una oportunidad para expandir su negocio,
+                        pero bajo estrictas condiciones. La relación entre Walter y Jesse se vuelve más compleja y
+                        peligrosa.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="tarjeta">
+                <div class="frente">
+                    <h3>Breaking bad Temporada 4</h3>
+                    <img src="img/temp4.jpg" alt="Temporada 4" />
+                    <p>"No estoy en peligro, Skyler. Yo soy el peligro"</p>
+                </div>
+                <div class="atras">
+                    <p>Se desata una guerra entre Walter y Gus, con estrategias, traiciones y asesinatos. Walter lucha
+                        por proteger su imperio y su familia mientras enfrenta amenazas letales.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="tarjeta">
+                <div class="frente">
+                    <h3>Breaking bad Temporada 5</h3>
+                    <img src="img/temp5.jpg" alt="Temporada 5" />
+                    <p>"Say my name"</p>
+                </div>
+                <div class="atras">
+                    <p> Walter alcanza la cima de su imperio criminal, pero la ambición y las consecuencias de sus actos
+                        lo llevan a su caída. La temporada finaliza con enfrentamientos decisivos que cambian el destino
+                        de todos.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="tarjeta">
+                <div class="frente">
+                    <h3>El Camino</h3>
+                    <img src="img/elcamino.jpg" alt="Temporada 5" />
+                    <p>El camino: A Breaking Bad Movie</p>
+                </div>
+                <div class="atras">
+                    <p>Secuela de Breaking Bad que sigue a Jesse Pinkman tras escapar del cautiverio.
+                        La película muestra su lucha por liberarse del pasado y
+                        finalmente empezar de cero. Es un cierre introspectivo y definitivo para su historia.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="tarjeta">
+                <div class="frente">
+                    <h3>Better Call Saul Temporada 1</h3>
+                    <img src="img/saul.jpg" alt="Temporada 5" />
+                    <p>El origen del abogado</p>
+                </div>
+                <div class="atras">
+                    <p>Jimmy McGill lucha por ser un abogado serio mientras enfrenta la sombra de su hermano y su propio
+                        pasado de estafas</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="tarjeta">
+                <div class="frente">
+                    <h3>Better Call Saul Temporada 2</h3>
+                    <img src="img/saul2.jpg" alt="Temporada 5" />
+                    <p> Primeros pasos en el lado oscuro</p>
+                </div>
+                <div class="atras">
+                    <p>Jimmy empieza a usar métodos poco ortodoxos y su relación con Kim Wexler se fortalece,
+                        complicando su vida profesional y personal.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="tarjeta">
+                <div class="frente">
+                    <h3>Better Call Saul Temporada 3</h3>
+                    <img src="img/saul3.jpg" alt="Temporada 5" />
+                    <p>Conflicto y caída</p>
+                </div>
+                <div class="atras">
+                    <p>La rivalidad con su hermano Chuck llega a su punto máximo, y Jimmy enfrenta graves consecuencias
+                        legales mientras se adentra en el mundo del crimen.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="tarjeta">
+                <div class="frente">
+                    <h3>Better Call Saul Temporada 4</h3>
+                    <img src="img/saul4.jpg" alt="Temporada 5" />
+                    <p>Transformación</p>
+                </div>
+                <div class="atras">
+                    <p>Tras la muerte de Chuck, Jimmy abraza su identidad como Saul Goodman y se involucra más en
+                        actividades ilegales, mientras su relación con Kim se pone a prueba.</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="tarjeta">
+                <div class="frente">
+                    <h3>Better Call Saul Temporada 5</h3>
+                    <img src="img/saul5.jpeg" alt="Temporada 5" />
+                    <p>El abogado criminal</p>
+                </div>
+                <div class="atras">
+                    <p>Saul se consolida en el mundo criminal, estableciendo vínculos con Gus Fring y enfrentando nuevos
+                        desafíos legales y personale</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="tarjeta">
+                <div class="frente">
+                    <h3>Better Call Saul Temporada 6</h3>
+                    <img src="img/saul6.jpg" alt="Temporada 5" />
+                    <p> Camino a Breaking Bad</p>
+                </div>
+                <div class="atras">
+                    <p>La historia llega a su fin con la transformación completa de Jimmy en Saul, cerrando su arco y
+                        conectando directamente con los eventos de Breaking Bad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <p class="autor">Josue Crc</p>
+</body>
+
+</html>
